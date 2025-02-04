@@ -306,12 +306,10 @@ p {
   transform: translateY(0); /* Move up to its original position */
 }
 #about{
-  height: 100vh;
     align-content: center;
 }
 #service
 {
-  height: 100vh;
     align-content: center;
 }
 
