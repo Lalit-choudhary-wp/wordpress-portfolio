@@ -7,8 +7,8 @@ Static personal portfolio for **Lalit Choudhary**, a Senior WordPress Developer 
 ## Stack
 
 - Semantic HTML
-- Modern CSS (custom properties, grid, flexbox, scroll-reveal, hover motion)
-- Vanilla JavaScript (IntersectionObserver, sticky nav, reduced-motion support)
+- Dark cinematic CSS (custom properties, grid, marquee, grain, scroll-reveal)
+- Vanilla JavaScript (IntersectionObserver, sticky nav, optional cursor follower, reduced-motion support)
 - GitHub Pages (no build step)
 
 ## Run locally

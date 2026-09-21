@@ -8,10 +8,12 @@
   const year = document.getElementById("year");
   const progress = document.querySelector(".scroll-progress");
   const heroAtmosphere = document.querySelector(".hero__atmosphere");
+  const cursor = document.querySelector(".cursor");
   const links = document.querySelectorAll('.nav__list a[href^="#"]');
   const sectionIds = ["about", "services", "work", "skills", "contact"];
   const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
   if (year) {
     year.textContent = String(new Date().getFullYear());
@@ -63,7 +65,7 @@
     const max = Math.max(doc.scrollHeight - window.innerHeight, 1);
 
     if (header) {
-      header.classList.toggle("is-light", y > 40);
+      header.classList.toggle("is-scrolled", y > 24);
     }
 
     if (progress) {
@@ -71,7 +73,7 @@
     }
 
     if (!reduceMotion && heroAtmosphere) {
-      heroAtmosphere.style.transform = "translate3d(0, " + (y * 0.18) + "px, 0)";
+      heroAtmosphere.style.transform = "translate3d(0, " + (y * 0.16) + "px, 0)";
     }
 
     ticking = false;
@@ -105,7 +107,7 @@
           observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
     );
 
     revealNodes.forEach(function (node) {
@@ -136,6 +138,38 @@
         const box = card.getBoundingClientRect();
         card.style.setProperty("--mx", event.clientX - box.left + "px");
         card.style.setProperty("--my", event.clientY - box.top + "px");
+      });
+    });
+  }
+
+  if (!reduceMotion && finePointer && cursor) {
+    root.classList.add("has-cursor");
+    let x = window.innerWidth / 2;
+    let y = window.innerHeight / 2;
+    let cx = x;
+    let cy = y;
+
+    window.addEventListener("pointermove", function (event) {
+      x = event.clientX;
+      y = event.clientY;
+      cursor.classList.add("is-on");
+    }, { passive: true });
+
+    function loop() {
+      cx += (x - cx) * 0.2;
+      cy += (y - cy) * 0.2;
+      cursor.style.transform = "translate3d(" + cx + "px, " + cy + "px, 0)";
+      window.requestAnimationFrame(loop);
+    }
+
+    loop();
+
+    document.querySelectorAll("a, button").forEach(function (el) {
+      el.addEventListener("pointerenter", function () {
+        cursor.classList.add("is-hover");
+      });
+      el.addEventListener("pointerleave", function () {
+        cursor.classList.remove("is-hover");
       });
     });
   }
