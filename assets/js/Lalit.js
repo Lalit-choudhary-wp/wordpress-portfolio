@@ -14,6 +14,7 @@
 
   function setMenu(open) {
     nav.classList.toggle("is-open", open);
+    header.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
   }
 
