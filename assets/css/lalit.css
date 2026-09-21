@@ -28,7 +28,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 5.25rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -430,7 +430,6 @@ p {
 /* Sections */
 .section {
   padding: 5.5rem 0;
-  scroll-margin-top: 4.5rem;
 }
 
 .section--muted {
@@ -634,7 +633,6 @@ p {
   background: var(--hero);
   color: var(--hero-fg);
   padding: 4.5rem 0;
-  scroll-margin-top: 4.5rem;
 }
 
 .cta h2 {
@@ -715,7 +713,7 @@ p {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding: 0.8rem 1.25rem 1.1rem;
+    padding: 0.5rem 1.25rem 1.4rem;
     background: #0c1222;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
@@ -729,13 +727,19 @@ p {
   }
 
   .nav__list a {
-    padding: 0.7rem 0;
+    padding: 0.85rem 0;
     display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .site-header.is-light .nav__list a {
+    border-bottom-color: var(--line);
   }
 
   .nav__cta {
     justify-content: center;
-    margin: 0.4rem 0 0.2rem;
+    margin: 0.85rem 0 0.15rem;
+    border-bottom: 0;
   }
 
   .work-grid {
