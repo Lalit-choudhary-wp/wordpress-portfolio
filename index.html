@@ -50,6 +50,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
     <nav class="nav" aria-label="Primary">
@@ -70,13 +71,19 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__atmosphere" aria-hidden="true">
+        <span class="hero__orb hero__orb--a"></span>
+        <span class="hero__orb hero__orb--b"></span>
+        <span class="hero__orb hero__orb--c"></span>
+        <span class="hero__grid"></span>
+      </div>
       <div class="hero__inner">
-        <p class="hero__eyebrow">Senior WordPress Developer · Nashik</p>
-        <h1 id="hero-title">Lalit Choudhary</h1>
-        <p class="hero__lede">
+        <p class="hero__eyebrow" data-hero style="--i:0">Senior WordPress Developer · Nashik</p>
+        <h1 id="hero-title" data-hero style="--i:1">Lalit Choudhary</h1>
+        <p class="hero__lede" data-hero style="--i:2">
           4.5+ years building custom WordPress themes, plugins, Gutenberg blocks, WooCommerce stores, and headless WordPress experiences — with a focus on maintainable code, SEO, and performance.
         </p>
-        <ul class="hero__stack" aria-label="Core WordPress expertise">
+        <ul class="hero__stack" aria-label="Core WordPress expertise" data-hero style="--i:3">
           <li>WordPress</li>
           <li>PHP</li>
           <li>Custom Themes</li>
@@ -86,30 +93,30 @@
           <li>WooCommerce</li>
           <li>Headless WordPress</li>
         </ul>
-        <div class="hero__actions">
+        <div class="hero__actions" data-hero style="--i:4">
           <a class="btn btn--primary" href="#work">View selected work</a>
-          <a class="btn btn--ghost" href="assets/imgs/Lalit%20Resume%202025.pdf" download="Lalit-Choudhary-Resume.pdf">Download CV</a>
+          <a class="btn btn--ghost" href="assets/imgs/Lalit-Resume-2025.pdf" download="Lalit Choudhary Resume.pdf">Download CV</a>
         </div>
       </div>
     </section>
 
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="wrap">
-        <div class="section__intro">
+        <div class="section__intro" data-reveal>
           <p class="eyebrow">About</p>
           <h2 id="about-title">Senior WordPress Developer, 4.5+ years</h2>
         </div>
         <div class="about-grid">
-          <div class="about-copy">
+          <div class="about-copy" data-reveal>
             <p>
-              Senior WordPress Developer based in Nashik with 4.5+ years of hands-on experience developing and designing websites. Well-versed in Agile methodologies and coding languages. Dedicated to developing creative solutions that meet business goals and requirements.
+              Senior WordPress Developer based in Nashik with 4.5+ years of experience building complete WordPress websites from scratch — custom themes, plugins, Gutenberg blocks, ACF Pro, and WooCommerce. Dedicated to clean, reliable, scalable solutions that meet business goals.
             </p>
             <p>
-              Day to day, that means custom WordPress themes and plugins, ACF / ACF Pro, Gutenberg and custom blocks, WooCommerce, REST APIs, and headless WordPress — alongside JavaScript, React, Angular, HTML/CSS, Tailwind, and Bootstrap. I also work with third-party API, CRM, Zapier, Make, and HubSpot integrations when a site needs to connect to the rest of the stack.
+              Strong hands-on work with PHP, JavaScript, REST APIs, headless WordPress, and page builders — alongside React, Angular, HTML/CSS, Tailwind, and Bootstrap. I also work with third-party APIs, CRM integrations such as HubSpot, Pipedrive, and Zoho, plus Make, Zapier, and AI tools to automate workflows, improve technical SEO, and ship faster, more secure WordPress sites.
             </p>
-            <a class="btn btn--outline" href="assets/imgs/Lalit%20Resume%202025.pdf" download="Lalit-Choudhary-Resume.pdf">Download CV</a>
+            <a class="btn btn--outline" href="assets/imgs/Lalit-Resume-2025.pdf" download="Lalit Choudhary Resume.pdf">Download CV</a>
           </div>
-          <aside class="focus-card" aria-labelledby="focus-title">
+          <aside class="focus-card" aria-labelledby="focus-title" data-reveal>
             <p class="eyebrow">Focus</p>
             <h3 id="focus-title">4.5+ years, one clear practice</h3>
             <p>
@@ -128,27 +135,27 @@
 
     <section class="section section--muted" id="services" aria-labelledby="services-title">
       <div class="wrap">
-        <div class="section__intro">
+        <div class="section__intro" data-reveal>
           <p class="eyebrow">Services</p>
           <h2 id="services-title">What I work on</h2>
         </div>
         <ul class="service-grid">
-          <li class="service-card">
+          <li class="service-card" data-reveal>
             <img src="assets/imgs/responsive.svg" alt="" width="48" height="48">
             <h3>WordPress development</h3>
             <p>Plugin development, theme customization, and template pages for WordPress sites.</p>
           </li>
-          <li class="service-card">
+          <li class="service-card" data-reveal>
             <img src="assets/imgs/analytics.svg" alt="" width="48" height="48">
             <h3>WordPress SEO</h3>
             <p>SEO implementation to improve search visibility and support organic traffic.</p>
           </li>
-          <li class="service-card">
+          <li class="service-card" data-reveal>
             <img src="assets/imgs/woocommerse.svg" alt="" width="48" height="48">
             <h3>WooCommerce development</h3>
             <p>Building and customizing WooCommerce stores for functionality and user experience.</p>
           </li>
-          <li class="service-card">
+          <li class="service-card" data-reveal>
             <img src="assets/imgs/speed.svg" alt="" width="48" height="48">
             <h3>Speed optimization</h3>
             <p>Performance work aimed at faster load times for WordPress sites.</p>
@@ -159,14 +166,14 @@
 
     <section class="section" id="work" aria-labelledby="work-title">
       <div class="wrap">
-        <div class="section__intro">
+        <div class="section__intro" data-reveal>
           <p class="eyebrow">Portfolio</p>
           <h2 id="work-title">Selected work</h2>
           <p class="section__lede">Live WordPress and front-end work across marketing, healthcare, and e-learning.</p>
         </div>
         <ul class="work-grid">
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://www.thesunflowerlab.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/sunflower lab 1 (1).png" alt="Screenshot of The Sunflower Lab homepage, a B2B marketing WordPress site" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -182,7 +189,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://www.benefact4.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/benefect4 1.png" alt="Screenshot of Benefact4, a charity marketing WordPress site" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -198,7 +205,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://www.bloomdata.ai/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/Bloomdata.webp" alt="Screenshot of Bloomdata, a Databricks marketing site built with HTML, CSS, Bootstrap, and JavaScript" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -217,7 +224,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://splashharbor.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/Splash Harbor.webp" alt="Screenshot of Splash Harbor, a tourism marketing WordPress site" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -233,7 +240,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://vatanindiankitchen.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/vatanindiankitchen.webp" alt="Screenshot of Vatan Indian Kitchen, a restaurant marketing WordPress site" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -249,7 +256,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://www.heeythere.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/heeythere.webp" alt="Screenshot of HeeyThere, a dating application marketing site built with HTML, CSS, Bootstrap, and JavaScript" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -268,7 +275,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://www.bluesinga.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/bluesinga 1.png" alt="Screenshot of BlueSinga, an innovation marketing WordPress site" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -284,7 +291,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://salessprout.ai/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/salessprout 1.png" alt="Screenshot of SalesSprout, a sales marketing site built with HTML5, CSS, JavaScript, and PHP" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -303,7 +310,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://shoremedicalspecialists.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/shoremedical  1.png" alt="Screenshot of Shore Medical Specialists, a healthcare WordPress site" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -318,7 +325,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://zinniax.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/zinniax 1.png" alt="Screenshot of Zinniax, a healthcare WordPress site" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -333,7 +340,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://www.learnkarts.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/Learnkarts 1.png" alt="Screenshot of Learnkarts, an e-learning WordPress site" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -348,7 +355,7 @@
             </article>
           </li>
           <li>
-            <article class="work-card">
+            <article class="work-card" data-reveal>
               <a class="work-card__media" href="https://www.thinkhubuniversity.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/imgs/think hubuniversity 1.png" alt="Screenshot of ThinkHub University, an e-learning WordPress site" width="960" height="600" loading="lazy" decoding="async">
               </a>
@@ -368,13 +375,13 @@
 
     <section class="section section--muted" id="skills" aria-labelledby="skills-title">
       <div class="wrap">
-        <div class="section__intro">
+        <div class="section__intro" data-reveal>
           <p class="eyebrow">Skills</p>
           <h2 id="skills-title">A practical WordPress stack</h2>
           <p class="section__lede">WordPress platform work, engineering, and the integrations used to connect sites to the rest of the stack.</p>
         </div>
         <div class="skill-groups">
-          <section class="skill-group" aria-labelledby="skill-wp">
+          <section class="skill-group" aria-labelledby="skill-wp" data-reveal>
             <h3 id="skill-wp">WordPress</h3>
             <ul class="tags tags--lg">
               <li>WordPress</li>
@@ -392,7 +399,7 @@
               <li>WP Rocket</li>
             </ul>
           </section>
-          <section class="skill-group" aria-labelledby="skill-eng">
+          <section class="skill-group" aria-labelledby="skill-eng" data-reveal>
             <h3 id="skill-eng">Engineering</h3>
             <ul class="tags tags--lg">
               <li>PHP</li>
@@ -406,14 +413,17 @@
               <li>Bootstrap</li>
             </ul>
           </section>
-          <section class="skill-group" aria-labelledby="skill-int">
+          <section class="skill-group" aria-labelledby="skill-int" data-reveal>
             <h3 id="skill-int">Integrations</h3>
             <ul class="tags tags--lg">
               <li>Third-party API integrations</li>
               <li>CRM integrations</li>
+              <li>HubSpot</li>
+              <li>Pipedrive</li>
+              <li>Zoho</li>
               <li>Zapier</li>
               <li>Make</li>
-              <li>HubSpot</li>
+              <li>AI tools</li>
             </ul>
           </section>
         </div>
@@ -421,7 +431,7 @@
     </section>
 
     <section class="cta" id="contact" aria-labelledby="contact-title">
-      <div class="wrap cta__inner">
+      <div class="wrap cta__inner" data-reveal>
         <div>
           <p class="eyebrow eyebrow--light">Contact</p>
           <h2 id="contact-title">Want to work together?</h2>

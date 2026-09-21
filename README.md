@@ -7,8 +7,8 @@ Static personal portfolio for **Lalit Choudhary**, a Senior WordPress Developer 
 ## Stack
 
 - Semantic HTML
-- Modern CSS (custom properties, grid, flexbox)
-- Vanilla JavaScript
+- Modern CSS (custom properties, grid, flexbox, scroll-reveal, hover motion)
+- Vanilla JavaScript (IntersectionObserver, sticky nav, reduced-motion support)
 - GitHub Pages (no build step)
 
 ## Run locally
@@ -27,7 +27,7 @@ You can also open `index.html` directly in a browser.
 
 - Hero, about, services, selected work, skills, and contact
 - Twelve live projects with original screenshots in `assets/imgs/`
-- Resume download: `assets/imgs/Lalit Resume 2025.pdf`
+- Resume download: `assets/imgs/Lalit-Resume-2025.pdf` (saves as `Lalit Choudhary Resume.pdf`)
 - Contact via [LinkedIn](https://www.linkedin.com/in/lalit-choudhary-142643172), [GitHub](https://github.com/Lalit-choudhary-wp), and Instagram
 
 ## License
